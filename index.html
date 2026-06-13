@@ -1,0 +1,340 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy Birthday Best Friend 🎂</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Segoe UI',sans-serif;
+}
+
+body{
+    background:linear-gradient(135deg,#ff758c,#ff7eb3,#ffd3a5);
+    color:white;
+    overflow:hidden;
+}
+
+/* Balloons */
+.balloon{
+    position:fixed;
+    bottom:-120px;
+    width:60px;
+    height:80px;
+    border-radius:50%;
+    animation:float 12s linear infinite;
+    z-index:1;
+}
+
+.balloon:after{
+    content:'';
+    position:absolute;
+    width:2px;
+    height:70px;
+    background:white;
+    left:50%;
+    top:80px;
+}
+
+@keyframes float{
+    0%{transform:translateY(0);}
+    100%{transform:translateY(-120vh);}
+}
+
+/* Pages */
+.page{
+    display:none;
+    height:100vh;
+    width:100%;
+    justify-content:center;
+    align-items:center;
+    flex-direction:column;
+    text-align:center;
+    padding:20px;
+    position:absolute;
+    top:0;
+    left:0;
+    z-index:2;
+}
+
+.page.active{
+    display:flex;
+}
+
+h1{
+    font-size:3rem;
+    margin-bottom:15px;
+}
+
+h2{
+    font-size:2rem;
+    margin-bottom:20px;
+}
+
+h3{
+    line-height:1.8;
+    font-weight:normal;
+}
+
+/* Profile Image */
+.profile{
+    width:250px;
+    height:250px;
+    border-radius:50%;
+    object-fit:cover;
+    object-position:center;
+    border:8px solid white;
+    box-shadow:0 0 30px rgba(255,255,255,.7);
+    margin-bottom:20px;
+}
+
+/* Cards */
+.card{
+    max-width:850px;
+    max-height:65vh;
+    overflow-y:auto;
+    background:rgba(255,255,255,.15);
+    backdrop-filter:blur(10px);
+    padding:30px;
+    border-radius:20px;
+}
+
+/* Gallery */
+.gallery{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:15px;
+    max-width:900px;
+}
+
+.gallery img{
+    width:100%;
+    height:250px;
+    object-fit:cover;
+    object-position:center;
+    border-radius:15px;
+    box-shadow:0 5px 15px rgba(0,0,0,.3);
+}
+
+/* Buttons */
+button{
+    margin-top:25px;
+    padding:15px 35px;
+    border:none;
+    border-radius:40px;
+    background:white;
+    color:#ff4081;
+    font-size:18px;
+    font-weight:bold;
+    cursor:pointer;
+    transition:.3s;
+}
+
+button:hover{
+    transform:scale(1.05);
+}
+
+#special{
+    margin-top:20px;
+    font-size:1.3rem;
+    font-weight:bold;
+}
+
+/* Mobile */
+@media(max-width:768px){
+
+    h1{
+        font-size:2rem;
+    }
+
+    h2{
+        font-size:1.5rem;
+    }
+
+  .profile {
+    width: 180px;
+    height: 180px;
+}
+
+.gallery {
+    grid-template-columns: 1fr;
+}
+
+.gallery img {
+    height: 100px;
+}
+
+.card {
+    max-height: 55vh;
+}
+    }
+}
+</style>
+</head>
+<body>
+
+<!-- PAGE 1 -->
+<section class="page active">
+
+<img class="profile"
+src="WhatsApp Image 2026-06-13 at 1.04.33 AM.jpeg"
+alt="Birthday Girl">
+
+<h1>🎉 I Would Like To Remind You Of One Thing 🎂</h1>
+
+<h2>This Is The Day You Were Born ❤️</h2>
+
+<div class="card">
+<h3>
+You have completed 21 wonderful years of life.
+From June 14, 2004, to today, your journey has spanned
+8,034 days, 192,816 hours, 11,568,960 minutes,
+and 694,137,600 seconds filled with memories,
+experiences, and growth.
+Tomorrow you step into your 22nd year.
+May your future bring endless happiness,
+success, and beautiful moments.
+</h3>
+</div>
+
+<button onclick="nextPage()">Next ➜</button>
+
+</section>
+
+<!-- PAGE 2 -->
+<section class="page">
+
+<h2>🤝 Our Friendship</h2>
+
+<div class="card">
+
+<h3>
+When I first met you, I never imagined that we would build such a deep emotional bond. ❤️
+</h3>
+
+<br>
+
+<h3>
+There was a time when I used to think about certain things and cry for days.
+One memory that always stays with me is when you brought food for me.
+Every time I think about it, it makes me emotional.
+As far back as I can remember, my mom was the only person who would take care of me and make sure I ate.
+After that, you were the one who did it for me.
+That’s something I can never forget. 🥹
+</h3>
+
+<br>
+
+<h3>
+It’s not just that. Whenever you help me make decisions,
+suggest what work to choose, or guide me in life,
+I feel how much you genuinely care about me.
+Your kindness means more to me than words can express. 🤍
+</h3>
+
+<br>
+
+<h3>
+I truly hope this friendship lasts forever.
+I want us to keep talking, sharing our thoughts,
+supporting each other, and creating more memories together.
+No matter where life takes us,
+I hope this beautiful bond always remains strong. ✨💫
+</h3>
+
+<br>
+
+<h3>
+Thank you for being such a special friend in my life. ❤️
+</h3>
+
+</div>
+
+<button onclick="nextPage()">Next ➜</button>
+
+</section>
+
+<!-- PAGE 3 -->
+<section class="page">
+
+<h2>📸 Beautiful Memories</h2>
+
+<div class="gallery">
+    <img src="memories9.jpeg" alt="Memory 1">
+    <img src="memories5.jpeg" alt="Memory 2">
+    <img src="memories7.jpeg" alt="Memory 3">
+    <img src="memories4.jpeg" alt="Memory 4">
+</div>
+
+<button onclick="nextPage()">Next ➜</button>
+
+</section>
+
+<!-- PAGE 4 -->
+<section class="page">
+
+<h2>🎁 Special Birthday Wish</h2>
+
+<div class="card">
+<h3>
+✨ வயது ஒரு எண்ணாக இருக்கலாம்; ஆனால் உன் புன்னகை,
+உன் அன்பு, உன் நட்பு — அவை அளவிட முடியாதவை.
+இனிய 22வது பிறந்தநாள் வாழ்த்துக்கள், தோழி! ✨💖🎊
+</h3>
+</div>
+
+<button onclick="showWish()">
+Open Surprise 🎊
+</button>
+
+<div id="special"></div>
+
+</section>
+
+<script>
+
+/* Balloons */
+const colors=["#ff4d6d","#ffbe0b","#3a86ff","#06d6a0","#fb5607"];
+
+for(let i=0;i<25;i++){
+    let b=document.createElement("div");
+    b.className="balloon";
+    b.style.left=Math.random()*100+"vw";
+    b.style.background=colors[Math.floor(Math.random()*colors.length)];
+    b.style.animationDuration=(8+Math.random()*8)+"s";
+    document.body.appendChild(b);
+}
+
+/* Page Navigation */
+const pages=document.querySelectorAll(".page");
+let currentPage=0;
+
+function nextPage(){
+
+    pages[currentPage].classList.remove("active");
+
+    currentPage++;
+
+    if(currentPage < pages.length){
+        pages[currentPage].classList.add("active");
+    }
+}
+
+/* Surprise */
+function showWish(){
+
+document.getElementById("special").innerHTML=
+"🎂 நீ இந்த சர்ப்ரைஸை எதிர்பார்க்கவே இல்லை என்று தெரியும். ஆனால் உன் பிறந்தநாளை நான் எப்படி சாதாரணமாக கடந்து விட முடியும்? இனிய பிறந்தநாள் வாழ்த்துக்கள், தோழி! ❤️🎉";
+
+}
+
+</script>
+
+</body>
+</html>
+```
